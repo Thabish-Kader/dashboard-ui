@@ -10,7 +10,7 @@ import Link from "next/link";
 export const Navigation = () => {
 	return (
 		<div className="h-full flex">
-			<div className="bg-black flex flex-col items-center w-[280px] rounded-[30px] m-[40px]">
+			<div className="bg-black flex flex-col items-center w-[280px] rounded-[30px] ">
 				<h1 className="text-white text-[36px] font-bold pt-[60px] ">
 					Board.{" "}
 				</h1>
