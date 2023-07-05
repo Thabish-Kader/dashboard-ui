@@ -4,7 +4,7 @@ import { AiFillApple } from "react-icons/ai";
 import Link from "next/link";
 const SignIn = () => {
 	return (
-		<main className="h-screen font-montserrat grid sm:flex bg-[#F5F5F5]">
+		<main className="h-screen font-montserrat grid sm:flex ">
 			{/* Board. (Black background) */}
 			<div className="bg-black w-full h-[200px] sm:w-[588px] sm:h-full flex items-center justify-center">
 				<h1 className="text-white text-[72px] font-bold">Board.</h1>
