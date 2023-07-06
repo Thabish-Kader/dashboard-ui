@@ -1,17 +1,16 @@
 "use client";
 import React from "react";
-import { PieChart, Pie, ResponsiveContainer, Cell, Legend } from "recharts";
+import { Pie, ResponsiveContainer, Cell, Legend } from "recharts";
 import { FakeStoreData } from "../types";
-
-const data = [
-	{ name: "Geeksforgeeks", students: 400 },
-	{ name: "Technical scripter", students: 700 },
-	{ name: "Geek-i-knack", students: 200 },
-];
+import dynamic from "next/dynamic";
 
 const COLORS = ["#FF8042", "#0088FE", "#00C49F"];
 
 export const PieGraph = ({ data }: { data: FakeStoreData[] }) => {
+	const PieChart = dynamic(
+		() => import("recharts").then((recharts) => recharts.PieChart),
+		{ ssr: false }
+	);
 	const newData = data
 		.slice(0, 3)
 		.map(({ title, price, rating: { count, rate } }) => ({
