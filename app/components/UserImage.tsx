@@ -16,7 +16,7 @@ export const UserImage = () => {
 			alt={session?.user?.name!}
 			height={40}
 			width={40}
-			className="object-cover rounded-full cursor-pointer"
+			className="object-cover rounded-full cursor-pointer mx-2"
 			onClick={() => signOut({ callbackUrl: "/" })}
 		/>
 	);

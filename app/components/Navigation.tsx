@@ -9,9 +9,17 @@ import settingicon from "../../public/setting_icon.svg";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MobileMenu } from "./MobileMenu";
+import { useSession } from "next-auth/react";
 
 export const Navigation = () => {
 	const [isMobile, setIsMobile] = useState(false);
+
+	const { data: session } = useSession({
+		required: true,
+		onUnauthenticated() {
+			window.location.href = "/";
+		},
+	});
 	return (
 		<>
 			{isMobile ? (

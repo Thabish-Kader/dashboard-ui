@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigation } from "../components/Navigation";
-import { DashboardRows } from "../components/DashboardRows";
 import { NextResponse } from "next/server";
 import { FakeStoreData } from "../types";
 import { Row1 } from "../components/Row1";
@@ -22,12 +21,6 @@ async function getData() {
 }
 
 const Dashboard = async () => {
-	const session = getServerSession(authOptions);
-
-	if (!session) {
-		redirect("/");
-	}
-
 	const data: FakeStoreData[] = await getData();
 
 	return (

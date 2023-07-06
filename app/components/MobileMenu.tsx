@@ -16,7 +16,7 @@ type MobileMenuProps = {
 
 export const MobileMenu: FC<MobileMenuProps> = ({ isMobile, setIsMobile }) => {
 	return (
-		<div className="absolute inset-0 h-screen bg-black  text-white flex flex-col items-center pt-32 justify-center z-10 overflow-x-hidden ">
+		<div className="fixed inset-0 h-screen bg-black  text-white flex flex-col items-center pt-32 justify-center z-10 ">
 			<ImCross
 				className="absolute top-[50px] right-[80px] cursor-pointer text-red-500"
 				onClick={() => setIsMobile(false)}

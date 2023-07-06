@@ -10,10 +10,10 @@ export const Row1 = () => {
 
 			{/* Inputs & User Icon */}
 			<div className="flex ">
-				<div className="bg-white rounded-[20px] flex justify-between px-[9px]">
+				<div className="bg-white rounded-[20px] flex justify-between px-[9px] ">
 					<input
 						type="text"
-						className=" outline-none text-[14px] placeholder:text-[#B0B0B0]"
+						className=" outline-none text-[14px] placeholder:text-[#B0B0B0] flex-0"
 						placeholder="Enter Search..."
 					/>
 					<Image src={search} alt="search" height={12} width={12} />
@@ -23,7 +23,7 @@ export const Row1 = () => {
 					alt="bellicon"
 					height={20}
 					width={18}
-					className="ml-[30px] mr-[20px]"
+					className="hidden sm:block ml-[30px] mr-[20px]"
 				/>
 				<UserImage />
 			</div>
