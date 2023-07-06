@@ -2,6 +2,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import Link from "next/link";
+import { GoogleSignIn } from "../components/GoogleSignIn";
 const SignIn = () => {
 	return (
 		<main className="h-screen font-montserrat grid sm:flex ">
@@ -23,10 +24,7 @@ const SignIn = () => {
 					</div>
 					{/* Sign in buttons */}
 					<div className="flex gap-[25px] mb-[25px]">
-						<button className="bg-white text-[#858585] text-center text-[12px] font-normal leading-normal pt-[8px] pb-[7px]  pr-[19px] rounded-full flex items-center">
-							<FcGoogle className="h-[14px] w-[14px] mr-[10px] ml-[19px]" />{" "}
-							Sign in with Google
-						</button>
+						<GoogleSignIn />
 						<button className="bg-white text-[#858585] text-center text-[12px] font-normal leading-normal pt-[8px] pb-[7px] pr-[24px] rounded-full flex items-center">
 							<AiFillApple className="text-[#999999] h-[14px] w-[14px] mr-[10px] ml-[24px]" />
 							Sign in with Apple

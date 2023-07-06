@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { PieChart, Pie, ResponsiveContainer, Cell, Legend } from "recharts";
+import { FakeStoreData } from "../types";
 
 const data = [
 	{ name: "Geeksforgeeks", students: 400 },
@@ -10,13 +11,22 @@ const data = [
 
 const COLORS = ["#FF8042", "#0088FE", "#00C49F"];
 
-export const PieGraph = () => {
+export const PieGraph = ({ data }: { data: FakeStoreData[] }) => {
+	const newData = data
+		.slice(0, 3)
+		.map(({ title, price, rating: { count, rate } }) => ({
+			title,
+			price,
+			count,
+			rate,
+		}));
+
 	return (
 		<div className="mt-[40px] grid gap-5 md:grid-cols-2 gap-x-[40px] mb-6">
 			<div className="h-full lg:h-[250px] w-full flex justify-between bg-white rounded-[20px] ">
 				<PieChart width={300} height={300}>
-					<Pie data={data} dataKey="students" fill={"red"}>
-						{data.map((entry, index) => (
+					<Pie data={newData} dataKey="rate" fill={"red"}>
+						{newData.map((entry, index) => (
 							<Cell
 								key={index}
 								fill={COLORS[index % COLORS.length]}
@@ -25,7 +35,7 @@ export const PieGraph = () => {
 					</Pie>
 					<text
 						x={50}
-						y={50}
+						y={30}
 						textAnchor="start"
 						style={{
 							fontSize: "18px",
@@ -33,7 +43,7 @@ export const PieGraph = () => {
 							fontWeight: "bold",
 						}}
 					>
-						Top Products
+						Rateings
 					</text>
 					<Legend
 						verticalAlign="middle"

@@ -2,6 +2,7 @@ import React from "react";
 import bell from "../../public/bell.svg";
 import Image from "next/image";
 import search from "../../public/Search_icon.svg";
+import { UserImage } from "./UserImage";
 export const Row1 = () => {
 	return (
 		<div className="flex justify-between">
@@ -24,13 +25,7 @@ export const Row1 = () => {
 					width={18}
 					className="ml-[30px] mr-[20px]"
 				/>
-				<Image
-					src={bell}
-					alt="bellicon"
-					height={20}
-					width={18}
-					className=""
-				/>
+				<UserImage />
 			</div>
 		</div>
 	);

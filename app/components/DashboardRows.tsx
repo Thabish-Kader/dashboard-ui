@@ -7,26 +7,18 @@ import { cardInfo } from "../constants";
 import { LineGraph } from "./LineGraph";
 import { PieGraph } from "./PieGraph";
 import { Row1 } from "./Row1";
+import { FakeStoreData } from "../types";
+import { Row2 } from "./Row2";
 
-export const DashboardRows = () => {
+export const DashboardRows = ({ data }: { data: FakeStoreData[] }) => {
 	return (
-		<div className="w-full xl:pl-[60px] pt-[10px] ">
+		<div className="w-full xl:pl-[60px] mt-[20px] xl:mt-0 pt-[10px] p-[40px] sm:p-0">
 			<Row1 />
-			<div className="grid md:grid-cols-2 xl:grid-cols-4 gap-[36.6px] pt-[40px] pb-[40px]">
-				{cardInfo.map((card, i) => (
-					<NumberCards
-						key={i}
-						title={card.title}
-						numbers={card.numbers}
-						icon={card.icon}
-						color={card.bgcolor}
-					/>
-				))}
-			</div>
+			<Row2 />
 			{/* Line chart */}
-			<LineGraph />
+			<LineGraph data={data} />
 			{/* Pie chart */}
-			<PieGraph />
+			<PieGraph data={data} />
 		</div>
 	);
 };
