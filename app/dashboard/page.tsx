@@ -7,7 +7,7 @@ import { Row2 } from "../components/Row2";
 import { LineGraph } from "../components/LineGraph";
 import { PieGraph } from "../components/PieGraph";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+
 import { redirect } from "next/navigation";
 
 async function getData() {
