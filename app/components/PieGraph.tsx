@@ -12,8 +12,8 @@ const COLORS = ["#FF8042", "#0088FE", "#00C49F"];
 
 export const PieGraph = () => {
 	return (
-		<div className="mt-[40px] grid grid-cols-2 gap-x-[40px] ">
-			<div className=" h-[250px] w-full flex justify-between bg-white rounded-[20px] ">
+		<div className="mt-[40px] grid gap-5 md:grid-cols-2 gap-x-[40px] mb-6">
+			<div className="h-full lg:h-[250px] w-full flex justify-between bg-white rounded-[20px] ">
 				<PieChart width={300} height={300}>
 					<Pie data={data} dataKey="students" fill={"red"}>
 						{data.map((entry, index) => (
@@ -43,7 +43,8 @@ export const PieGraph = () => {
 					/>
 				</PieChart>
 			</div>
-			<div className="h-[250px] bg-white rounded-[20px] flex flex-col py-[30px] px-[40px] ">
+			{/* Todays Schedule */}
+			<div className="h-full lg:h-[250px] bg-white rounded-[20px] flex flex-col py-[30px] px-[40px] ">
 				{/* Heading */}
 				<div className="flex items-center justify-between ">
 					<h1 className="font-montserrat text-[18px] font-bold leading-normal">

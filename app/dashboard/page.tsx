@@ -5,7 +5,7 @@ import { NumberCards } from "../components/NumberCards";
 
 const Dashboard = () => {
 	return (
-		<main className=" font-montserrat h-screen flex p-[40px]">
+		<main className=" font-montserrat h-screen flex flex-col xl:flex-row p-[40px]">
 			{/* Navigation Menu */}
 			<Navigation />
 			<DashboardRows />

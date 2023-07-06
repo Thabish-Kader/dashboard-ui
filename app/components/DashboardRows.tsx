@@ -10,7 +10,7 @@ import { Row1 } from "./Row1";
 
 export const DashboardRows = () => {
 	return (
-		<div className="w-full pl-[60px] pt-[10px] ">
+		<div className="w-full xl:pl-[60px] pt-[10px] ">
 			<Row1 />
 			<div className="grid md:grid-cols-2 xl:grid-cols-4 gap-[36.6px] pt-[40px] pb-[40px]">
 				{cardInfo.map((card, i) => (
