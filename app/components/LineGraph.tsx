@@ -8,8 +8,6 @@ import {
 	Tooltip,
 	Legend,
 	ResponsiveContainer,
-	Text,
-	ReferenceLine,
 } from "recharts";
 const data = [
 	{
@@ -83,7 +81,6 @@ export const LineGraph = () => {
 					layout="horizontal"
 					iconType="circle"
 				/>
-				<Legend />
 				<Line
 					type="monotone"
 					dot={false}
